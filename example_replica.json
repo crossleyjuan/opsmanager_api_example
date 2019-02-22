@@ -1,0 +1,120 @@
+{
+	"processes": [{
+		"args2_6": {
+			"net": {
+				"port": 27018
+			},
+			"replication": {
+				"replSetName": "myReplicaSet"
+			},
+			"storage": {
+				"dbPath": "/data/rs1"
+			},
+			"systemLog": {
+				"destination": "file",
+				"path": "/data/rs1/mongodb.log"
+			}
+		},
+		"authSchemaVersion": 5,
+		"disabled": false,
+		"featureCompatibilityVersion": "4.0",
+		"hostname": "servername.domain.com",
+		"logRotate": {
+			"sizeThresholdMB": 1000.0,
+			"timeThresholdHrs": 24
+		},
+		"manualMode": false,
+		"name": "myReplicaSet_1",
+		"processType": "mongod",
+		"version": "4.0.6-ent"
+	}, {
+		"args2_6": {
+			"net": {
+				"port": 27019
+			},
+			"replication": {
+				"replSetName": "myReplicaSet"
+			},
+			"storage": {
+				"dbPath": "/data/rs2"
+			},
+			"systemLog": {
+				"destination": "file",
+				"path": "/data/rs2/mongodb.log"
+			}
+		},
+		"authSchemaVersion": 5,
+		"disabled": false,
+		"featureCompatibilityVersion": "4.0",
+		"hostname": "servername.domain.com",
+		"logRotate": {
+			"sizeThresholdMB": 1000.0,
+			"timeThresholdHrs": 24
+		},
+		"manualMode": false,
+		"name": "myReplicaSet_2",
+		"processType": "mongod",
+		"version": "4.0.6-ent"
+	}, {
+		"args2_6": {
+			"net": {
+				"port": 27020
+			},
+			"replication": {
+				"replSetName": "myReplicaSet"
+			},
+			"storage": {
+				"dbPath": "/data/rs3"
+			},
+			"systemLog": {
+				"destination": "file",
+				"path": "/data/rs3/mongodb.log"
+			}
+		},
+		"authSchemaVersion": 5,
+		"disabled": false,
+		"featureCompatibilityVersion": "4.0",
+		"hostname": "servername.domain.com",
+		"logRotate": {
+			"sizeThresholdMB": 1000.0,
+			"timeThresholdHrs": 24
+		},
+		"manualMode": false,
+		"name": "myReplicaSet_3",
+		"processType": "mongod",
+		"version": "4.0.6-ent"
+	}],
+	"replicaSets": [{
+		"_id": "myReplicaSet",
+		"members": [{
+			"_id": 0,
+			"arbiterOnly": false,
+			"buildIndexes": true,
+			"hidden": false,
+			"host": "myReplicaSet_1",
+			"priority": 1.0,
+			"slaveDelay": 0,
+			"votes": 1
+		}, {
+			"_id": 1,
+			"arbiterOnly": false,
+			"buildIndexes": true,
+			"hidden": false,
+			"host": "myReplicaSet_2",
+			"priority": 1.0,
+			"slaveDelay": 0,
+			"votes": 1
+		}, {
+			"_id": 2,
+			"arbiterOnly": false,
+			"buildIndexes": true,
+			"hidden": false,
+			"host": "myReplicaSet_3",
+			"priority": 1.0,
+			"slaveDelay": 0,
+			"votes": 1
+		}],
+		"protocolVersion": "1",
+		"settings": {}
+	}]
+}

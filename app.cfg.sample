@@ -1,0 +1,8 @@
+{
+    "mmsGroupId":"<mmsGroupId>",
+    "user":"<user owner of the apikey>",
+    "apikey":"<api key of the user>",
+    "root":"<root of the ops manager example: http://1.1.1.1:8080/api/public/v1.0>"
+}
+
+
